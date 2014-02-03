@@ -1,0 +1,133 @@
+
+$blue:  rgb(64,165,219); 
+$blue2: rgb(0,92,157); 
+$white: #fff; 
+$gray: #AAAAAA; 
+$black: #111111;
+
+
+.breadcrumb {
+    background: $white;
+}
+
+body {
+    background: $white !important;
+    font-family: 'Montserrat', sans-serif !important;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: $black;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+}
+
+.effect {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    background-color: $gray;
+}
+
+.dropdown-toggle {
+    background-color: $blue;
+    .caret {
+        border-top-color: $white;
+    }
+}
+
+.jumbotron {
+    .gradient {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
+        background: linear-gradient( left, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 36%, rgba(216,225,231,1) 82%, rgba(242,246,248,1) 100%);
+            width: 100%;
+            position: absolute;
+            opacity: 0.5;
+            height: 50px;
+            z-index: 99;
+            &.top {
+                left: 0px;
+                top: 0px;
+            }
+            &.bottom {
+                left: 0px;
+                bottom: 35px;
+                height: 15px;
+            }
+    }
+    h1 {
+        @media (min-width: 768px) {
+            font-size: 46px;
+        }
+        @media (min-width: 992px) {
+            font-size: 63px;
+        }
+    }
+
+    background: $white;
+    position: relative;
+    text-align: center;
+    .woman {
+        @media (min-width: 768px) {
+            display: block;
+        }
+        display:none;
+        position: absolute;
+        top: 0;
+        left:0;
+        height: 100%;
+    }
+    background-repeat:no-repeat;
+    background-position:left; 
+    background-size:  100%;
+}
+
+.row {
+    margin-bottom: 15px;
+    &.au-view {
+        .practioner .panel-body {
+            background-image: url(../images/stetho.png);
+        }
+        .facilities .panel-body {
+            background-image: url(../images/building.png);
+        }
+        .personnel .panel-body {
+            background-image: url(../images/staff.png);
+            background-size: 120px 100px !important;
+        }
+        .panel {
+            background: linear-gradient(90deg, $blue 0%, $blue2 100%);
+            .panel-body {
+                color: $white;
+                height: 269px;
+                background-repeat:no-repeat;
+                background-position:center; 
+                background-size: 100px 100px;
+            }
+            .panel-heading {
+                background:  transparent;
+                color: $white;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+        }
+    }
+    &.au-detail {
+        .panel-heading {
+            background: transparent;
+            font-size: 18px;
+        }
+        ul {
+            padding-left: 10px;
+            padding-left: 10px;
+            li {
+                display: list-item;
+                border: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
